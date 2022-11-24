@@ -1,11 +1,11 @@
-package com.dmitriy.phonetesttask.app.di
+package com.dmitriy.phonetesttask.app.di.component
 
-import com.dmitriy.base.core.network.di.SourceProviderModule
+import com.dmitriy.base.core.network.di.module.SourceProviderModule
 import com.dmitriy.phonetesttask.app.base.CoreApplication
-import com.dmitriy.phonetesttask.app.di.modules.CartFragmentModule
-import com.dmitriy.phonetesttask.app.di.modules.DetailsFragmentModule
-import com.dmitriy.phonetesttask.app.di.modules.HomeFragmentModule
-import com.dmitriy.phonetesttask.app.di.modules.PhonesSourceModule
+import com.dmitriy.phonetesttask.app.di.module.CartFragmentModule
+import com.dmitriy.phonetesttask.app.di.module.DetailsFragmentModule
+import com.dmitriy.phonetesttask.app.di.module.HomeFragmentModule
+import com.dmitriy.base.core.network.di.module.PhonesSourceModule
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import javax.inject.Singleton

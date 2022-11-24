@@ -1,4 +1,4 @@
-package com.dmitriy.phonetesttask.app.di.modules
+package com.dmitriy.phonetesttask.app.di.module
 
 import com.dmitriy.phonetesttask.app.screens.main.tabs.home.HomeFragment
 import dagger.Module

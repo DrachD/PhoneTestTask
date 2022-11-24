@@ -1,5 +1,7 @@
 package com.dmitriy.base.core.network.source.phones.entities
 
+import com.google.gson.annotations.SerializedName
+
 data class GetMainPhonesListResponseEntity(
-    val home_store: List<GetMainPhoneResponseEntity>
+    @SerializedName("home_store") val home_store: List<GetMainPhoneResponseEntity>
 )

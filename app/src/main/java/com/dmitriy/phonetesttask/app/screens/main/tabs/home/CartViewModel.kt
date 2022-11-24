@@ -9,13 +9,13 @@ import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.item
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.items.CartItem
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.items.CartProgressCardItem
 import com.dmitriy.base.core.utils.GeneralResponse
-import com.dmitriy.phonetesttask.app.screens.base.BaseViewModel
+import com.dmitriy.phonetesttask.app.screens.base.CoreViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class CartViewModel @Inject constructor(
     private val phoneRepository: PhoneRepository
-) : BaseViewModel() {
+) : CoreViewModel() {
 
     private val _data = MutableLiveData<List<ListItem>>()
     val data: LiveData<List<ListItem>> = _data

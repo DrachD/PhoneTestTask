@@ -1,4 +1,4 @@
-package com.dmitriy.phonetesttask.app.di.modules
+package com.dmitriy.base.core.network.di.module
 
 import com.dmitriy.base.core.network.model.PhonesSource
 import com.dmitriy.base.core.network.source.phones.RetrofitPhoneSource

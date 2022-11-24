@@ -13,7 +13,7 @@ import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.home.item
 import com.dmitriy.phonetesttask.app.controllers.SelectCategory
 import com.dmitriy.phonetesttask.databinding.*
 import com.dmitriy.base.core.utils.Downloader
-import com.dmitriy.phonetesttask.app.findTopNavController
+import com.dmitriy.phonetesttask.app.utils.findTopNavController
 import com.dmitriy.phonetesttask.databinding.ItemHotSalesBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 

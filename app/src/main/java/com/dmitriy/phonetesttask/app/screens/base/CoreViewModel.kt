@@ -3,7 +3,7 @@ package com.dmitriy.phonetesttask.app.screens.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-open class BaseViewModel : ViewModel() {
+open class CoreViewModel : ViewModel() {
 
     protected val _showProgressEvent = MutableLiveData<Boolean>()
     val showProgressEvent: MutableLiveData<Boolean> = _showProgressEvent

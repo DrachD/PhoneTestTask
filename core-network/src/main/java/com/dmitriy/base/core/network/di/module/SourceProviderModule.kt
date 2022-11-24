@@ -1,4 +1,4 @@
-package com.dmitriy.base.core.network.di
+package com.dmitriy.base.core.network.di.module
 
 import com.dmitriy.base.core.network.Constants
 import com.dmitriy.base.core.network.source.phones.PhonesApi

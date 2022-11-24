@@ -6,7 +6,7 @@ import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
 
-open class BaseRetrofitSource {
+open class CoreRetrofitSource {
 
     protected suspend fun <T> wrapRetrofitException(block: suspend () -> Response<T>): GeneralResponse<T> {
         return try {

@@ -1,4 +1,4 @@
-package com.dmitriy.phonetesttask.app
+package com.dmitriy.phonetesttask.app.utils
 
 import android.app.Activity
 import androidx.navigation.NavController

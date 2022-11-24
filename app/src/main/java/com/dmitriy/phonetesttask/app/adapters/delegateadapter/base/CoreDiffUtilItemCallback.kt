@@ -2,7 +2,7 @@ package com.dmitriy.phonetesttask.app.adapters.delegateadapter.base
 
 import androidx.recyclerview.widget.DiffUtil
 
-open class BaseDiffUtilItemCallback : DiffUtil.ItemCallback<ListItem>() {
+open class CoreDiffUtilItemCallback : DiffUtil.ItemCallback<ListItem>() {
     override fun areItemsTheSame(oldItem: ListItem, newItem: ListItem): Boolean {
         return oldItem.itemId == newItem.itemId
     }
