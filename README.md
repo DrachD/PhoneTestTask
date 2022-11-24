@@ -3,7 +3,7 @@
 ### YouTube - video
 https://youtu.be/swz9wF9C7jg
 
-## Components:
+### Components:
 
 - Kotlin
 - MVVM
