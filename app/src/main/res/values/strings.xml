@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">PhoneTestTask</string>
+
+    <!--  Splash Screen  -->
+    <string name="ecommerce_concept">Ecommerce\nConcept</string>
+
+    <!--  Select Category  -->
+    <string name="phones">Phones</string>
+    <string name="computer">Computer</string>
+    <string name="health">Health</string>
+    <string name="books">Books</string>
+    <string name="something">Something</string>
+
+    <!--  Location  -->
+    <string name="zihuatanejo_gro">Zihuatanejo, Gro</string>
+
+    <!--  Main  -->
+    <string name="select_category">Select Category</string>
+    <string name="select_color_and_capacity">Select color and capacity</string>
+    <string name="hot_sales">Hot sales</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="view_all">view all</string>
+    <string name="see_more">see more</string>
+    <string name="explorer">Explorer</string>
+    <string name="favorite">Favorite</string>
+    <string name="person">Person</string>
+    <string name="shop_new">New</string>
+    <string name="buy_now">Buy now!</string>
+    <string name="iphone_12">Iphone 12</string>
+    <string name="super_mega_rapido">Super.Mega.Rapido.</string>
+    <string name="samsung_galaxy_s20_ultra">Samsung Galaxy s20 Ultra</string>
+    <string name="xiaomi_mi_10_pro">Xiaomi Mi 10 Pro</string>
+    <string name="samsung_note_20_ultra">Samsung Note 20 Ultra</string>
+    <string name="motorola_one_edge">Motorola One Edge</string>
+    <string name="filter_options">Filter Options</string>
+    <string name="done">Done</string>
+    <string name="brand">Brand</string>
+    <string name="price">Price</string>
+    <string name="size">Size</string>
+    <string name="shop_tab">Shop</string>
+    <string name="details_tab">Details</string>
+    <string name="features_tab">Features</string>
+    <string name="free">Free</string>
+    <string name="total">Total</string>
+    <string name="delivery">Delivery</string>
+    <string name="samsung">Samsung</string>
+    <string name="product_details">Product Details</string>
+    <string name="add_address">Add address</string>
+    <string name="my_cart">My Cart</string>
+    <string name="us">us</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="size_4.5_5.5">4.5 to 5.5 inches</string>
+    <string name="size_5.5_6.5">5.5 to 6.5 inches</string>
+    <string name="size_6.5_7.5">6.5 to 7.5 inches</string>
+    <string name="dollar">$</string>
+    <string name="xiaomi">Xiaomi</string>
+    <string name="iphone">Iphone</string>
+    <string name="motorola">Motorola</string>
+    <string name="select_option">Select option</string>
+
+    <!--  Price  -->
+    <string name="price_1047">$1,047</string>
+    <string name="price_300">$300</string>
+    <string name="price_1500">$1,500</string>
+    <string name="price_6000">$0 us</string>
+    <string name="price_400">$400</string>
+    <string name="price_300_500">$300 - $500</string>
+    <string name="price_500_700">$500 - $700</string>
+    <string name="price_700_900">$700 - $900</string>
+    <string name="price_0_10000">$0 - $10000</string>
+    <string name="add_to_card_1500_00">$1,500.00</string>
+
+    <!--  Size  -->
+    <string name="gb_8_all_caps_true">8 GB</string>
+    <string name="gb_128_all_caps_true">128 GB</string>
+    <string name="gb_128_all_caps_false">128 gb</string>
+    <string name="gb_256_all_caps_true">256 GB</string>
+    <string name="gb_256_all_caps_false">256 gb</string>
+
+    <string name="exynos_990">Exynos 990</string>
+    <string name="mp_108_12">108 + 12 mp</string>
+    <string name="price_3000_00">$%1$s.00</string>
+    <string name="total_price">$%1$s us</string>
+    <string name="zero">0</string>
+</resources>

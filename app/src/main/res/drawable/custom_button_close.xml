@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/purple_dark" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_crest" android:width="7dp" android:height="14dp" />
+</layer-list>

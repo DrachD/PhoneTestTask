@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="44dp">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/closeImageButton"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="44dp"
+
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_button_location"
+        android:backgroundTint="@color/purple_dark"
+        android:src="@drawable/ic_crest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <FrameLayout
+        android:id="@+id/doneFrameLayout"
+        android:layout_width="86dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_button_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/markpro"
+            android:includeFontPadding="false"
+            android:textSize="18sp"
+            android:text="@string/done"
+            android:textFontWeight="500"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            tools:targetApi="p" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/markpro"
+        android:textSize="18sp"
+        android:textColor="@color/purple_dark"
+        android:text="@string/filter_options"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="@+id/closeImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/closeImageButton"
+        tools:targetApi="p"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/brendTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/markpro"
+        android:text="@string/brand"
+        android:textColor="@color/purple_dark"
+        android:textSize="18sp"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toStartOf="@+id/closeImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/closeImageButton"
+        tools:targetApi="p"/>
+
+    <Spinner
+        android:id="@+id/brandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_outline"
+        android:popupBackground="@drawable/spinner_outline_white_background"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@id/doneFrameLayout"
+        app:layout_constraintStart_toStartOf="@id/brendTextView"
+        app:layout_constraintTop_toBottomOf="@id/brendTextView"
+        tools:ignore="DuplicateClickableBoundsCheck,TouchTargetSizeCheck"
+        tools:listitem="@layout/item_brand" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/markpro"
+        android:text="@string/price"
+        android:textColor="@color/purple_dark"
+        android:textSize="18sp"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toStartOf="@+id/brandSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/brandSpinner"
+        tools:targetApi="p"/>
+
+    <Spinner
+        android:id="@+id/priceSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_outline"
+        android:popupBackground="@drawable/spinner_outline_white_background"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@id/doneFrameLayout"
+        app:layout_constraintStart_toStartOf="@id/priceTextView"
+        app:layout_constraintTop_toBottomOf="@id/priceTextView"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:listitem="@layout/item_price" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/markpro"
+        android:text="@string/size"
+        android:textColor="@color/purple_dark"
+        android:textSize="18sp"
+        android:textFontWeight="500"
+        app:layout_constraintStart_toStartOf="@+id/priceSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/priceSpinner"
+        tools:targetApi="p"/>
+
+    <Spinner
+        android:id="@+id/sizeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_outline"
+        android:popupBackground="@drawable/spinner_outline_white_background"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@id/doneFrameLayout"
+        app:layout_constraintStart_toStartOf="@id/sizeTextView"
+        app:layout_constraintTop_toBottomOf="@id/sizeTextView"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:listitem="@layout/item_size" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

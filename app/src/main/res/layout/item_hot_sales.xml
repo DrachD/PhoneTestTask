@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hotSalesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:fontFamily="@font/markpro"
+        android:text="@string/hot_sales"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textFontWeight="700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/seeMoreHotSalesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:text="@string/see_more"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        android:textFontWeight="400"
+        app:layout_constraintBottom_toBottomOf="@+id/hotSalesTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="p" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/hotSalesRecyclerView"
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:layout_height="182dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hotSalesTextView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
