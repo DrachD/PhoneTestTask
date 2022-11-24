@@ -1,5 +1,8 @@
 # PhoneTestTask
 
+## YouTube - video
+https://youtu.be/swz9wF9C7jg
+
 ## Components:
 
 - Kotlin
