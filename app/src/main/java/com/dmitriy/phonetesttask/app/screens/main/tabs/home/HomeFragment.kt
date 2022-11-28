@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.dmitriy.phonetesttask.*
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.home.adapters.HomeAdapter
+import com.dmitriy.phonetesttask.app.base.CoreApplication
+import com.dmitriy.phonetesttask.app.di.HomeViewModelFactory
 import com.dmitriy.phonetesttask.databinding.FragmentHomeBinding
 import com.dmitriy.phonetesttask.app.screens.bottomsheet.BottomSheetFragment
 import dagger.android.support.AndroidSupportInjection
@@ -20,12 +23,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding get() = _binding!!
 
     @Inject
+    lateinit var viewModelFactory: HomeViewModelFactory
+
     lateinit var viewModel: HomeViewModel
     private val adapter = HomeAdapter()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        AndroidSupportInjection.inject(this)
+        (context.applicationContext as CoreApplication).appComponent.inject(this)
+        viewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]
+        //AndroidSupportInjection.inject(this)
     }
 
     override fun onCreateView(

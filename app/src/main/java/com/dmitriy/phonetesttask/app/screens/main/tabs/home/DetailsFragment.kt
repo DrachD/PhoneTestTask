@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.dmitriy.phonetesttask.R
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.adapters.DetailsAdapter
+import com.dmitriy.phonetesttask.app.base.CoreApplication
+import com.dmitriy.phonetesttask.app.di.DetailsViewModelFactory
 import com.dmitriy.phonetesttask.databinding.FragmentDetailsBinding
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
@@ -19,12 +22,16 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     private val binding get() = _binding!!
 
     @Inject
+    lateinit var viewModelFactory: DetailsViewModelFactory
+
     lateinit var viewModel: DetailsViewModel
     private val adapter = DetailsAdapter()
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        AndroidSupportInjection.inject(this)
+        (context.applicationContext as CoreApplication).appComponent.inject(this)
+        viewModel = ViewModelProvider(this, viewModelFactory)[DetailsViewModel::class.java]
+        //AndroidSupportInjection.inject(this)
     }
 
     override fun onCreateView(
