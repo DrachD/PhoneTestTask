@@ -1,7 +1,6 @@
 package com.dmitriy.phonetesttask.app.model.phones
 
 import com.dmitriy.base.core.network.model.PhonesSource
-import com.dmitriy.base.core.network.source.phones.RetrofitPhoneSource
 import javax.inject.Inject
 
 class PhoneRepository @Inject constructor(

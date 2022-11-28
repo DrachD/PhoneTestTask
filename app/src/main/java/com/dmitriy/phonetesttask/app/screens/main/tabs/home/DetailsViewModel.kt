@@ -7,11 +7,13 @@ import com.dmitriy.phonetesttask.app.model.phones.PhoneRepository
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.base.ListItem
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.items.*
 import com.dmitriy.base.core.utils.GeneralResponse
+import com.dmitriy.phonetesttask.app.di.ActivityScope
 import com.dmitriy.phonetesttask.app.screens.base.CoreViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@ActivityScope
 class DetailsViewModel @Inject constructor(
     private val phoneRepository: PhoneRepository
 ) : CoreViewModel() {

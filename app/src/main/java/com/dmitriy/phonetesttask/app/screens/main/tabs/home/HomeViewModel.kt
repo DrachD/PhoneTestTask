@@ -9,10 +9,12 @@ import com.dmitriy.phonetesttask.app.adapters.delegateadapter.base.ListItem
 import com.dmitriy.phonetesttask.app.model.phones.entities.BestSellerList
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.home.items.*
 import com.dmitriy.base.core.utils.GeneralResponse
+import com.dmitriy.phonetesttask.app.di.ActivityScope
 import com.dmitriy.phonetesttask.app.screens.base.CoreViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@ActivityScope
 class HomeViewModel @Inject constructor(
     private val phoneRepository: PhoneRepository
 ) : CoreViewModel() {

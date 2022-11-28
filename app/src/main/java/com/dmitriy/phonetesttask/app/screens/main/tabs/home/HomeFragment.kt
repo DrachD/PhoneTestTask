@@ -1,7 +1,6 @@
 package com.dmitriy.phonetesttask.app.screens.main.tabs.home
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,9 +11,9 @@ import com.dmitriy.phonetesttask.*
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.home.adapters.HomeAdapter
 import com.dmitriy.phonetesttask.app.base.CoreApplication
 import com.dmitriy.phonetesttask.app.di.HomeViewModelFactory
+import com.dmitriy.phonetesttask.app.di.component.HomeComponent
 import com.dmitriy.phonetesttask.databinding.FragmentHomeBinding
 import com.dmitriy.phonetesttask.app.screens.bottomsheet.BottomSheetFragment
-import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -22,17 +21,19 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
+    lateinit var homeComponent: HomeComponent
+
     @Inject
     lateinit var viewModelFactory: HomeViewModelFactory
-
     lateinit var viewModel: HomeViewModel
+
     private val adapter = HomeAdapter()
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (context.applicationContext as CoreApplication).appComponent.inject(this)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        homeComponent = (requireActivity().applicationContext as CoreApplication).appComponent.homeComponent().create()
+        homeComponent.inject(this)
+        super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]
-        //AndroidSupportInjection.inject(this)
     }
 
     override fun onCreateView(

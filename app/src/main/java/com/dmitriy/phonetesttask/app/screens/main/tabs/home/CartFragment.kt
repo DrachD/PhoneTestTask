@@ -1,6 +1,5 @@
 package com.dmitriy.phonetesttask.app.screens.main.tabs.home
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,7 @@ import com.dmitriy.phonetesttask.app.base.CoreApplication
 import com.dmitriy.phonetesttask.databinding.FragmentCartBinding
 import com.dmitriy.phonetesttask.app.controllers.CartController
 import com.dmitriy.phonetesttask.app.di.CartViewModelFactory
-import dagger.android.support.AndroidSupportInjection
+import com.dmitriy.phonetesttask.app.di.component.CartComponent
 import javax.inject.Inject
 
 class CartFragment: Fragment(R.layout.fragment_cart) {
@@ -22,17 +21,19 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
     private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
 
+    lateinit var cartComponent: CartComponent
+
     @Inject
     lateinit var viewModelFactory: CartViewModelFactory
-
     lateinit var viewModel: CartViewModel
+
     private lateinit var adapter: CartAdapter
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (context.applicationContext as CoreApplication).appComponent.inject(this)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        cartComponent = (requireActivity().applicationContext as CoreApplication).appComponent.cartComponent().create()
+        cartComponent.inject(this)
+        super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this, viewModelFactory)[CartViewModel::class.java]
-        //AndroidSupportInjection.inject(this)
     }
 
     override fun onCreateView(

@@ -1,6 +1,5 @@
 package com.dmitriy.phonetesttask.app.screens.main.tabs.home
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,8 @@ import com.dmitriy.phonetesttask.R
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.adapters.DetailsAdapter
 import com.dmitriy.phonetesttask.app.base.CoreApplication
 import com.dmitriy.phonetesttask.app.di.DetailsViewModelFactory
+import com.dmitriy.phonetesttask.app.di.component.DetailsComponent
 import com.dmitriy.phonetesttask.databinding.FragmentDetailsBinding
-import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
@@ -21,17 +20,19 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
 
+    lateinit var detailsComponent: DetailsComponent
+
     @Inject
     lateinit var viewModelFactory: DetailsViewModelFactory
-
     lateinit var viewModel: DetailsViewModel
+
     private val adapter = DetailsAdapter()
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (context.applicationContext as CoreApplication).appComponent.inject(this)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        detailsComponent = (requireActivity().applicationContext as CoreApplication).appComponent.detailsComponent().create()
+        detailsComponent.inject(this)
+        super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this, viewModelFactory)[DetailsViewModel::class.java]
-        //AndroidSupportInjection.inject(this)
     }
 
     override fun onCreateView(

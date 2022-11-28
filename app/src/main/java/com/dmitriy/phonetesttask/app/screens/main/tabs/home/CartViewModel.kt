@@ -9,10 +9,12 @@ import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.item
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.items.CartItem
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.items.CartProgressCardItem
 import com.dmitriy.base.core.utils.GeneralResponse
+import com.dmitriy.phonetesttask.app.di.ActivityScope
 import com.dmitriy.phonetesttask.app.screens.base.CoreViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@ActivityScope
 class CartViewModel @Inject constructor(
     private val phoneRepository: PhoneRepository
 ) : CoreViewModel() {
