@@ -1,4 +1,4 @@
-package com.dmitriy.phonetesttask.delegateadapter
+package com.dmitriy.phonetesttask.app.adapters.arrayadapters
 
 import android.content.Context
 import android.view.KeyEvent
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.dmitriy.phonetesttask.R
-import javax.inject.Inject
 
 class BrandAdapter(
     context: Context

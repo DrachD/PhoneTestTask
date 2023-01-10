@@ -1,15 +1,17 @@
 package com.dmitriy.phonetesttask.app.di.component
 
-import com.dmitriy.base.core.network.di.module.SourceProviderModule
-import com.dmitriy.base.core.network.di.module.PhonesSourceModule
 import com.dmitriy.phonetesttask.app.di.subcomponent.AppSubcomponent
+import com.example.data.repository.di.module.RetrofitPhoneRepositoryModule
+import com.example.data.repository.di.module.RetrofitPhoneSourceModule
+import com.example.data.repository.di.module.SourceProviderModule
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [
     SourceProviderModule::class,
-    PhonesSourceModule::class,
+    RetrofitPhoneSourceModule::class,
+    RetrofitPhoneRepositoryModule::class,
     AppSubcomponent::class
 ])
 interface AppComponent {

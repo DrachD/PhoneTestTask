@@ -1,4 +1,4 @@
-package com.dmitriy.phonetesttask.delegateadapter
+package com.dmitriy.phonetesttask.app.adapters.arrayadapters
 
 import android.content.Context
 import android.view.KeyEvent

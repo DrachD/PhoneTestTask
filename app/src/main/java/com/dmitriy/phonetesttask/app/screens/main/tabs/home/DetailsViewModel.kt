@@ -3,20 +3,20 @@ package com.dmitriy.phonetesttask.app.screens.main.tabs.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.dmitriy.phonetesttask.app.model.phones.PhoneRepository
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.base.ListItem
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.items.*
-import com.dmitriy.base.core.utils.GeneralResponse
 import com.dmitriy.phonetesttask.app.di.ActivityScope
-import com.dmitriy.phonetesttask.app.screens.base.CoreViewModel
+import com.dmitriy.phonetesttask.app.screens.base.BaseViewModel
+import com.example.domain.GeneralResponse
+import com.example.domain.repository.RetrofitPhoneRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @ActivityScope
 class DetailsViewModel @Inject constructor(
-    private val phoneRepository: PhoneRepository
-) : CoreViewModel() {
+    private val phoneRepository: RetrofitPhoneRepository
+) : BaseViewModel() {
 
     private val _data = MutableLiveData<List<ListItem>>()
     val data: LiveData<List<ListItem>> = _data

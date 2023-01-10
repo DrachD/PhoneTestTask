@@ -51,7 +51,7 @@ object CartController {
 
     fun resetProducts(price: Int, countItems: Int) = CoroutineScope(Dispatchers.IO).launch {
 
-        CartController.countItems -= countItems
+        this@CartController.countItems -= countItems
 
         totalPrice -= price * countItems
         _getTotalPriceEvent.emit(totalPrice)

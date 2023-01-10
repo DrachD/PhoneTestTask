@@ -12,6 +12,5 @@ class HomeAdapter : AsyncListDifferDelegationAdapter<ListItem>(CoreDiffUtilItemC
             .addDelegate(HomeScreenDelegates.selectCategoryItem())
             .addDelegate(HomeScreenDelegates.hotSalesItem())
             .addDelegate(HomeScreenDelegates.bestSellerItem())
-            //.addDelegate(HomeScreenDelegates.hotSalesCardItem())
     }
 }

@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import com.dmitriy.phonetesttask.R
-import com.dmitriy.phonetesttask.delegateadapter.BrandAdapter
-import com.dmitriy.phonetesttask.delegateadapter.PriceAdapter
-import com.dmitriy.phonetesttask.delegateadapter.SizeAdapter
+import com.dmitriy.phonetesttask.app.adapters.arrayadapters.BrandAdapter
+import com.dmitriy.phonetesttask.app.adapters.arrayadapters.PriceAdapter
+import com.dmitriy.phonetesttask.app.adapters.arrayadapters.SizeAdapter
 import com.dmitriy.phonetesttask.databinding.FragmentFilterSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 

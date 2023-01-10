@@ -38,8 +38,10 @@ android {
 
 dependencies {
 
-    implementation project(":core-network")
-    implementation project(":core-utils")
+    implementation project(':utils')
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+    implementation project(path: ':common')
 
     implementation libs.coreKtx
     implementation libs.appcompat

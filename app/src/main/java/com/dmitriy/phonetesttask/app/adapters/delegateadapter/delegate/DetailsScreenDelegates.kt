@@ -15,6 +15,8 @@ import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.a
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.items.*
 import com.dmitriy.phonetesttask.databinding.*
 import com.dmitriy.base.core.utils.Downloader
+import com.dmitriy.phonetesttask.app.utils.getBaseColor
+import com.dmitriy.phonetesttask.app.utils.setBaseColorFilter
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 import kotlin.math.abs
 
@@ -96,10 +98,10 @@ object DetailsScreenDelegates {
 
                 bg128FrameLayout.setOnClickListener {
                     if (capacity == Capacity.CAPACITY_256) {
-                        bg128FrameLayout.background.setColorFilter(resources.getColor(R.color.orange), PorterDuff.Mode.SRC_ATOP)
-                        bg256FrameLayout.background.setColorFilter(resources.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP)
-                        bg128TextView.setTextColor(resources.getColor(R.color.white))
-                        bg256TextView.setTextColor(resources.getColor(R.color.grey_light_8D))
+                        bg128FrameLayout.background.setBaseColorFilter(resources.getBaseColor(R.color.orange, null))
+                        bg256FrameLayout.background.setBaseColorFilter(resources.getBaseColor(R.color.white, null))
+                        bg128TextView.setTextColor(resources.getBaseColor(R.color.white, null))
+                        bg256TextView.setTextColor(resources.getBaseColor(R.color.grey_light_8D, null))
                         bg128TextView.text = resources.getString(R.string.gb_128_all_caps_true)
                         bg256TextView.text = resources.getString(R.string.gb_256_all_caps_false)
                         capacity = Capacity.CAPACITY_128
@@ -108,10 +110,10 @@ object DetailsScreenDelegates {
 
                 bg256FrameLayout.setOnClickListener {
                     if (capacity == Capacity.CAPACITY_128) {
-                        bg256FrameLayout.background.setColorFilter(resources.getColor(R.color.orange), PorterDuff.Mode.SRC_ATOP)
-                        bg128FrameLayout.background.setColorFilter(resources.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP)
-                        bg256TextView.setTextColor(resources.getColor(R.color.white))
-                        bg128TextView.setTextColor(resources.getColor(R.color.grey_light_8D))
+                        bg256FrameLayout.background.setBaseColorFilter(resources.getBaseColor(R.color.orange, null))
+                        bg128FrameLayout.background.setBaseColorFilter(resources.getBaseColor(R.color.white, null))
+                        bg256TextView.setTextColor(resources.getBaseColor(R.color.white, null))
+                        bg128TextView.setTextColor(resources.getBaseColor(R.color.grey_light_8D, null))
                         bg128TextView.text = resources.getString(R.string.gb_128_all_caps_false)
                         bg256TextView.text = resources.getString(R.string.gb_256_all_caps_true)
                         capacity = Capacity.CAPACITY_256

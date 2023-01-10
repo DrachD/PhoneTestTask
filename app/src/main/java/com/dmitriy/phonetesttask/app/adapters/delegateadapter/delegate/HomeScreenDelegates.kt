@@ -1,6 +1,7 @@
 package com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate
 
 import android.annotation.SuppressLint
+import android.content.res.Resources.Theme
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.dmitriy.phonetesttask.app.screens.main.MainActivity
@@ -14,6 +15,7 @@ import com.dmitriy.phonetesttask.app.controllers.SelectCategory
 import com.dmitriy.phonetesttask.databinding.*
 import com.dmitriy.base.core.utils.Downloader
 import com.dmitriy.phonetesttask.app.utils.findTopNavController
+import com.dmitriy.phonetesttask.app.utils.getBaseColor
 import com.dmitriy.phonetesttask.databinding.ItemHotSalesBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
@@ -172,11 +174,11 @@ object HomeScreenDelegates {
         if (selectCategoryItem.positionSelected == SelectCategory.positionSelected) {
             bindingSelected = binding
             binding.categoryCardView.setCardBackgroundColor(ContextCompat.getColor(context, SelectCategory.backgroundColorSelected))
-            binding.iconCategoryImageView.setColorFilter(resources.getColor(SelectCategory.colorTintSelected))
+            binding.iconCategoryImageView.setColorFilter(resources.getBaseColor(SelectCategory.colorTintSelected, null))
             binding.categoryTextView.setTextColor(ContextCompat.getColor(binding.root.context, SelectCategory.textColorSelected))
         } else {
             binding.categoryCardView.setCardBackgroundColor(ContextCompat.getColor(context, SelectCategory.backgroundColorUnselected))
-            binding.iconCategoryImageView.setColorFilter(context.resources.getColor(SelectCategory.colorTintUnselected))
+            binding.iconCategoryImageView.setColorFilter(resources.getBaseColor(SelectCategory.colorTintUnselected, null))
             binding.categoryTextView.setTextColor(ContextCompat.getColor(context, SelectCategory.textColorUnselected))
         }
     }
@@ -184,17 +186,18 @@ object HomeScreenDelegates {
     private fun onSelectedItem(
         binding: ItemSelectCategoryCardBinding
     ) {
+        val resources = binding.root.resources
         val context = binding.root.context
 
         bindingSelected?.apply {
             categoryCardView.setCardBackgroundColor(ContextCompat.getColor(context, SelectCategory.backgroundColorUnselected))
-            iconCategoryImageView.setColorFilter(context.resources.getColor(SelectCategory.colorTintUnselected))
+            iconCategoryImageView.setColorFilter(resources.getBaseColor(SelectCategory.colorTintUnselected, null))
             categoryTextView.setTextColor(ContextCompat.getColor(context, SelectCategory.textColorUnselected))
         }
 
         binding.apply {
             binding.categoryCardView.setCardBackgroundColor(ContextCompat.getColor(context, SelectCategory.backgroundColorSelected))
-            binding.iconCategoryImageView.setColorFilter(context.resources.getColor(SelectCategory.colorTintSelected))
+            binding.iconCategoryImageView.setColorFilter(resources.getBaseColor(SelectCategory.colorTintSelected, null))
             binding.categoryTextView.setTextColor(ContextCompat.getColor(context, SelectCategory.textColorSelected))
 
         }

@@ -14,5 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "PhoneTestTask"
 include ':app'
-include ':core-network'
-include ':core-utils'
+include ':utils'
+include ':common'
+include ':data'
+include ':domain'

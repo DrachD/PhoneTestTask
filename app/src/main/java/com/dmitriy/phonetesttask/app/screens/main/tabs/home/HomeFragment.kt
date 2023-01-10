@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.dmitriy.phonetesttask.*
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.home.adapters.HomeAdapter
-import com.dmitriy.phonetesttask.app.base.CoreApplication
+import com.dmitriy.phonetesttask.app.base.BaseApplication
 import com.dmitriy.phonetesttask.app.di.HomeViewModelFactory
 import com.dmitriy.phonetesttask.app.di.component.HomeComponent
 import com.dmitriy.phonetesttask.databinding.FragmentHomeBinding
@@ -30,7 +30,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val adapter = HomeAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        homeComponent = (requireActivity().applicationContext as CoreApplication).appComponent.homeComponent().create()
+        homeComponent = (requireActivity().applicationContext as BaseApplication).appComponent.homeComponent().create()
         homeComponent.inject(this)
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]

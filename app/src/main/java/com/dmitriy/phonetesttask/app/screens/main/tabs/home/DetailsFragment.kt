@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.dmitriy.phonetesttask.R
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.details.adapters.DetailsAdapter
-import com.dmitriy.phonetesttask.app.base.CoreApplication
+import com.dmitriy.phonetesttask.app.base.BaseApplication
 import com.dmitriy.phonetesttask.app.di.DetailsViewModelFactory
 import com.dmitriy.phonetesttask.app.di.component.DetailsComponent
 import com.dmitriy.phonetesttask.databinding.FragmentDetailsBinding
@@ -29,7 +29,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     private val adapter = DetailsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        detailsComponent = (requireActivity().applicationContext as CoreApplication).appComponent.detailsComponent().create()
+        detailsComponent = (requireActivity().applicationContext as BaseApplication).appComponent.detailsComponent().create()
         detailsComponent.inject(this)
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this, viewModelFactory)[DetailsViewModel::class.java]

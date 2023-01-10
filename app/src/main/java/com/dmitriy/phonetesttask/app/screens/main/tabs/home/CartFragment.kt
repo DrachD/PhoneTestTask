@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.dmitriy.phonetesttask.R
 import com.dmitriy.phonetesttask.app.adapters.delegateadapter.delegate.cart.adapters.CartAdapter
-import com.dmitriy.phonetesttask.app.base.CoreApplication
+import com.dmitriy.phonetesttask.app.base.BaseApplication
 import com.dmitriy.phonetesttask.databinding.FragmentCartBinding
 import com.dmitriy.phonetesttask.app.controllers.CartController
 import com.dmitriy.phonetesttask.app.di.CartViewModelFactory
@@ -30,7 +30,7 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
     private lateinit var adapter: CartAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        cartComponent = (requireActivity().applicationContext as CoreApplication).appComponent.cartComponent().create()
+        cartComponent = (requireActivity().applicationContext as BaseApplication).appComponent.cartComponent().create()
         cartComponent.inject(this)
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this, viewModelFactory)[CartViewModel::class.java]
